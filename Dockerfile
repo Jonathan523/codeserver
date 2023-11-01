@@ -12,7 +12,7 @@ ENV SHELL=/bin/bash
 # Install unzip + rclone (support for remote filesystem)
 RUN sudo apt-get update && sudo apt-get install unzip -y
 RUN curl https://rclone.org/install.sh | sudo bash
-RUN sudo apt-get update && sudo apt-get install build-essentials python3-pip -y
+RUN sudo apt-get update && sudo apt-get install build-essential python3-pip neofetch htop -y
 # Copy rclone tasks to /tmp, to potentially be used
 COPY deploy-container/rclone-tasks.json /tmp/rclone-tasks.json
 
